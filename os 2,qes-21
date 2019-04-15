@@ -1,0 +1,35 @@
+/*Ques. 20. Consider that a system has P resources of same type. These resources are shared by Q processes time to time. 
+All processes request and release the resources one at a time.Generate a solution to demonstrate that, 
+the system is in safe state when following conditions are satisfied. 
+Conditions: 
+1.  Maximum resource need of each process is between 1 and P. 
+2. Summation of all maximum needs is less than P+Q */
+
+#include<stdio.h>
+struct proc
+{
+int pid;
+int wt,tat;
+int flag,flag1;
+};
+struct proc p1[10];
+int i,j,k,n,no,m;
+float atat=0.0,awt=0.0;
+int tbt=0;
+int minimum1();
+int main()
+{
+printf("\nenter the number of processes:");
+scanf("%d",&n);
+printf("\nenter the proc information:");
+printf("\npid at bt");
+for(i=0;i<n;i++)
+{
+p1[i].wt=0;
+p1[i].tat=0;
+p1[i].flag=0;
+p1[i].flag1=0;
+scanf("%d%d%d",&p1[i].pid,&p1[i].at,&p1[i].bt);
+tbt+=p1[i].bt;
+p1[i].rbt=p1[i].bt;
+}
