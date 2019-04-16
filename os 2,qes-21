@@ -90,3 +90,40 @@ p1[k].wt++;
 }
 }
 }
+printf("%d",tbt+minv);
+for(i=0;i<n;i++)
+{
+awt+=p1[i].wt;
+}
+awt=awt/n;
+for(i=0;i<n;i++)
+{
+p1[i].tat=p1[i].wt+p1[i].bt;
+atat+=p1[i].tat;
+}
+atat=atat/n;
+printf("\n average wt=%f, average tat=%f",awt,atat);
+printf("\nthe proc information:");
+printf("\npid at bt wt tat");
+for(i=0;i<n;i++)
+{
+printf("\n%d %d %d %d %d",p1[i].pid,p1[i].at,p1[i].bt,p1[i].wt,p1[i].tat);
+}
+return 0;
+}
+int minimum1()
+{
+int loc,z;
+int mini;
+mini=99;
+loc=-1;
+for(z=0;z<n;z++)
+{
+if(p1[z].rbt>0&&p1[z].at<=i&&p1[z].rbt<mini)
+{
+mini=p1[z].rbt;
+loc=z;
+}
+}
+return loc;
+}
